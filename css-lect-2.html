@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+
+    <style type="text/css">
+        /*Class Selector   */
+        .btn
+        {
+            width:110px;; 
+            padding:10px;
+            background-color: orange;
+            font-weight: bold;
+            float: left;
+            text-align: center;
+            margin-right: 10px;;
+            cursor: pointer;
+            transition: ease all 1s;
+            border-radius: 10px;;
+        }
+        .btn:hover{
+            background-color: black;
+            color: orange;;
+            text-transform: uppercase;
+            /* transform: scale(1.1); */
+            
+            transition: ease all 1s;;
+            /*             tL   TR   BR   BL*/
+            border-radius: 20px 0px 20px 0px;;
+            
+        }
+
+        .sign
+        {
+            background-color:greenyellow;
+        }
+        .btn:active{
+            transform: translate(-5px,-5px);
+            cursor: progress;
+        }
+    </style>
+</head>
+<body>
+    <div class="sign btn">Signup</div>
+    <div class="btn">Login</div>
+    <div class="btn" style="background-color: orangered;">Contact Us</div>
+
+    <div class="btn">About Us</div>
+    <div class="btn">Signup</div>
+
+<hr>
+<br>
+<ol>
+    <li>the priority of inline styling is higher than class selector</li>
+    <li>the order of defining of class selectors is important</li>
+    <li>The order of usung the classes does not matter</li>
+</ol>
+</body>
+</html>

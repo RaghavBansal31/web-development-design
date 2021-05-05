@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer
+        {
+           width: 800px;
+           height: 400px;;
+           background-color: aquamarine; 
+        }
+        #left
+        {
+            width:200px;
+            float: left;
+            height:inherit ; background-color:black;
+            overflow-y: scroll;
+        }
+        #right
+        {
+            width:600px;
+            float: left;
+            height:inherit ; background-color:lightgreen;
+        }
+        ol{
+            background-color:orange;
+            margin-top: 0px;;
+            list-style: none;;
+            padding-left: 0px;;
+        }
+        li{
+            text-align: center;
+            line-height: 40px;;
+            border-bottom: 2px black dotted;;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        li:hover{
+            background-color: black;
+            color:orange;
+            text-decoration: underline;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="left">
+            <ol>
+                <a href="http://www.realjavaonline.com" target="blank"><li>Loops</li></a>
+                <li>Arrays</li>
+                <li>Functions</li>
+                <li>Pointers</li>
+                <li>Structures</li>
+                <li>Strings</li>
+                <li>Class</li>
+                <li>Inheritance</li>
+                <li>Loops</li>
+                <li>Arrays</li>
+                <li>Functions</li>
+                <li>Pointers</li>
+                <li>Structures</li>
+                <li>Strings</li>
+                <li>Class</li>
+                <li>Inheritance</li>
+                
+            </ol>
+        </div>
+        <div id="right"></div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        /* ID Selector */
+        #signup-btn{
+            float:left;
+            width:100px;
+            background-color: orange;
+            color:white;
+            text-align: center;
+            padding: 10px 0px 10px 0px; /*top right bottom left */
+            margin-right: 10px;;
+            border: 5px red dotted; /*dashed,double,dotted,solid*/
+        }
+        .spl{
+            border: 5px red double; /*dashed,double,dotted,solid*/
+        }
+        #signup-btn:hover
+        {
+            background-color: yellow;;
+        }
+
+.login{
+    float:left;
+            width:100px;
+            background-color: orange;
+            color:white;
+            text-align: center;
+            padding: 10px 0px 10px 0px; /*top right bottom left */
+            margin-right: 10px;;
+            border-bottom: 5px red solid; /*dashed,double,dotted,solid*/
+            border-top: 5px red solid; /*dashed,double,dotted,solid*/
+
+            box-shadow: 5px 5px 5px black;
+            text-shadow: 3px 3px 2px black;;
+}
+.login:hover{
+    border-bottom: 5px rgb(64, 1, 238) solid; /*dashed,double,dotted,solid*/
+    box-shadow: -5px -5px 1px black;
+}
+    </style>
+</head>
+<body>
+    <p>The priority of ID Selector properties is higher than class selector</p>
+    <p>1. Inline style<br> 
+        2. ID selector <br>
+        3. Class Selector
+    </p>
+    <div id="signup-btn" class="spl" style="border:10px black solid">
+        Signup
+    </div>
+   
+    <div class="login">
+            Login
+    </div>
+
+</body>
+</html>
