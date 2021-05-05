@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <center>
+            <table width="500" height="600">
+                <tr>
+                    <th>
+                        <h2>Profile Web form</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" maxlength="10" placeholder="write your name" autofocus>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" placeholder="write your password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Enter Branch
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="branch">CSE
+                        <input type="radio" name="branch">FSE
+                        <input type="radio" name="branch">EEE
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        technologies you know
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">C++
+                        <input type="checkbox">Java
+                        <input type="checkbox">C
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Select City
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select>
+                            <option value="none">select</option>
+                            <option value="BTI">Bathinda</option>
+                            <option value="CHD">Chandigarh</option>
+                            <option value="AMT">Amritsar</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td>Places Visited</td></tr>
+                <tr>
+                    <td>
+                        <select size="6" multiple>
+                            <option value="none">Select</option>
+                            <option value="AR">Ajit Road</option>
+                            <option value="MT">Model Town</option>
+                            <option value="RG">Rose Garden</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Details/Comment</td>
+                </tr>
+                <tr><td>
+                    <textarea cols="50" rows="10"></textarea>
+                </td></tr>
+                <tr>
+                    <td>
+                        <label >Date of birth</label>
+                        <input type="date">
+                        <br>
+                        <label for="">Time of birth</label>
+                        <input type="time">
+                        <br>
+                        <p>
+                            date time both
+                            <input type="datetime-local">
+                        </p>
+                        <p>
+                            Color
+                            <input type="color">
+                        </p>
+                        <p>
+                            Age
+                            <input type="number" min="18" max="50">
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        select city
+                        <br>
+                        <input list="x">
+                        <datalist id="x">
+                            <option value="bathinda"></option>
+                            <option value="bathinda"></option>
+                            <option value="bathinda"></option>
+                            <option value="bathinda"></option>
+                            <option value="bathinda"></option>
+                            <option value="bathinda"></option>
+                            <option value="bathinda"></option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            select profile pic
+                        </label>
+                        <input type ="file">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        cost/price
+                        <input type="range"min="18" max="40" step="10">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <input type="button" value="submit to server">
+                    </th>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
