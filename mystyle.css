@@ -1,0 +1,100 @@
+/*Universal Selector*/
+*{
+    margin: 0px;;
+}
+body{
+    background-color: black;
+    background-image: url(../pics/bg3.png);
+}
+#outer-body
+{
+    width: 1000px; height: 800px; background-color: white;
+    margin: auto;
+   
+}
+#logo
+{
+    float: left;
+    width: 50px; height: 50px;
+    background-image: url(../pics/admininfo.png);  
+    border: 1px black solid;
+    background-size: contain;
+    margin-left: 20px;
+    margin-top: 5px;;
+    border-radius: 50%;
+}
+#title-div
+{
+    width: inherit;
+    height: 60px;; background-color: rgb(255, 182, 45);
+   
+   
+}
+#site-name
+{
+    float: left;; margin-top: 10px;;
+    font-size: 25px;
+    font-style: italic;
+    margin-left: 20px;;
+}
+#fb{
+    float: right;
+    width: 50px;
+    height: 50px;
+    /* border: 1px black solid;; */
+    background-image: url(../pics/fb.png);
+    background-size: contain;
+    margin-right: 20px;;
+    margin-top: 5px;;
+}
+#insta{
+    float: right;
+    width: 50px;
+    height: 50px;
+    /* border: 1px black solid;; */
+    background-image: url(../pics/insta.jpg);
+    background-size: contain;
+    margin-right: 20px;;
+    margin-top: 5px;;
+    border-radius: 50%;
+}
+.dmy:hover{
+    transform: scale(1.2);
+}
+#menu-div
+{
+    width: inherit;
+    height: 50px;; background-color: rgb(12, 12, 11);
+    opacity: .8;
+}
+ol
+{
+    list-style: none;
+   margin-left: -40px;;
+    background-color: yellow;
+}
+li{
+    float: left;
+    color: black;
+    padding: 10px;
+    background-color: #fff;
+    margin-top: 5px;
+   margin-right: 5px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px 10px 0px 0px;
+
+}
+li:hover{
+    background-color: orange;
+}
+#banner
+{
+    width: inherit;
+    height: 260px;
+    background-image: url(../pics/banner-05.jpg);
+    background-position: center;
+}
+#banner:hover{
+    opacity: .5;
+}

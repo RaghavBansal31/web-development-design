@@ -1,0 +1,213 @@
+*{
+    margin: 0px;;
+}
+body{
+    background-color: black;
+    background-image: url(../pics/bg3.png);
+}
+#outer-body{
+    width: 800;height:1200;
+    background-color: brown;
+    margin: auto;
+}
+#logo{
+    float: left;
+    background-image:url(../pics/agent.jpg);
+    width:50px;height: 50px;
+    background-size: contain;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 5px;;
+    border-radius: 50%;
+    
+}
+#menu{
+    width: inherit;
+    background-color: orange;
+    opacity: .7;
+    height: 60px;
+
+}
+
+#written{
+    float: left;
+    margin-top: 10px;;
+    font-size: 25px;
+    font-style: bold ;
+    margin-left: 20px;;
+}
+
+#fb{
+    background-image: url(../pics/fb5.jpg);
+    width:50px;
+    height:50px;
+    float: right;
+    margin-top: 5px;
+    border-radius: 50%;
+    background-size: contain;
+    border: 1px black solid;
+    margin-right: 20px;
+}
+
+#insta
+    {
+        background-image: url(../pics/insta.jpg);
+        width:50px;
+        height:50px;
+        float: right;
+        margin-top: 5px;
+        border-radius: 50%;
+        background-size: contain;
+        border: 1px black solid;
+        margin-right: 20px;
+    }
+#twit
+    {
+        background-image: url(../pics/twit.jpg);
+        width:50px;
+        height:50px;
+        float: right;
+        
+        border-radius: 50%;
+        background-size: contain;
+        border: 1px black solid;
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+
+#title-div{
+    width: inherit;
+    height: 50px; background-color: black;
+    opacity: .8;
+    
+
+
+}
+ol{
+    list-style: none;
+   margin-left: 0px;;
+
+}
+li{
+    float:left;
+    color: white;
+    padding:10px;
+    background-color: rgb(205, 94, 50);
+    margin-right: 40px;
+    margin-top: 5px;
+    margin-left:-30px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px 10px 0px 0px;
+
+}
+li:hover{
+    background-color: pink;
+    color: purple;
+    border-radius: 20px 0px 20px 0px;
+
+}
+#ban{
+
+    width: inherit;
+    height:400px;
+    background-image: url(../pics/coding_professor.jpg);
+    background-position: center;
+
+
+}
+#ban:hover{
+    opacity: .5;
+}
+#menu2{
+    width:inherit;
+    height: 50px;
+    background-color: orange;
+    opacity: .7;
+}
+#w{
+    float: left;
+    margin-top: 10px;;
+    text-align: center;
+    font-size: 25px;
+    font-style: bold ;
+    margin-left: 340px;;
+}
+    
+#pic{
+    
+    width:inherit;
+    height: 233;
+    background-color:brown;
+    opacity: .9;
+}
+
+
+#pic1{
+    width: 200;
+    height:100px;
+    background-image: url(../ARAD-e1576598031298.jpg);
+    background-size: contain;
+    background-position: left;
+    float:left;
+    padding:10px;
+    margin-right: 0px;
+    margin-top:20px;
+    margin-left:20px;
+
+}
+#pic2{
+    width: 200;
+    height:100px;
+    background-image: url(../tavor-7-8583-web-823x330.jpg);
+    background-size: contain;
+    background-position: center;
+    float: left;
+    padding:10px;
+    margin-right: 0px;
+    margin-top: 20px;
+    margin-left:50px;
+}
+#pic3{
+    width: 200;
+    height:100px;
+    background-image: url(../uzi-pro-5404.jpg);
+    background-size: contain;
+    background-position: center;
+    float: left;
+    padding:10px;
+    margin-right: 0px;
+    margin-top: 20px;
+    margin-left:50px;
+}
+#menu3{
+    margin-top: -70px;
+    width:inherit;
+    height:50px;
+    background-color: orange;
+    opacity: .7;
+}
+#w1{
+    float: left;
+    margin-top: 10px;;
+    text-align: center;
+    font-size: 25px;
+    font-style: bold ;
+    margin-left: 340px;;
+}
+#pic1:hover{
+    transform:scale(3.0);
+    transition: ease all 3s
+}
+#pic2:hover{
+    transform:scale(3.0);
+    transition: ease all 3s
+}
+#pic3:hover{
+    transform:scale(3.0);
+    transition: ease all 3s
+}
+#h{
+   margin-top: 0px;
+    
+}
