@@ -1,0 +1,255 @@
+ <html> 
+    <head>
+        <title>
+          Document
+        </title>
+        <style>
+           
+            button{
+                width: 80px;
+                height: 49px;
+                background-color: black;
+                border-radius: 30%;
+                color: crimson ;
+            }
+            label{
+                color: crimson;
+            }
+            table{
+                
+                width: 500;
+                height: 500;
+                border: 2px brown solid;
+                float: center;
+            }
+            h1{
+                color: crimson;
+                background-color: black;
+            }
+            .container {
+                 display: /*inline-block*/flex;
+                position: relative;
+                padding-left: 45px;
+                margin-bottom: 15px;
+                cursor: pointer;
+                font-size: 22px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            }
+            .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            }
+
+            .container:hover input ~ .checkmark {
+                background-color: #ccc;
+                }
+                .container input:checked ~ .checkmark {
+                background-color: rgb(37, 30, 25);
+                }
+                .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    }
+
+                    /* Show the checkmark when checked */
+                    .container input:checked ~ .checkmark:after {
+                    display: block;
+                    }
+
+                    /* Style the checkmark/indicator */
+                    .container .checkmark:after {
+                    left: 9px;
+                    top: 5px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    }
+
+
+            
+        </style>
+        <script>
+            
+            function doCheck(ref){
+                 if(ref.checked==true)
+                // if(document.querySelector("#chkall").checked==true)
+                 {
+                     document.querySelector("#chkDosa").checked=true;
+                     document.querySelector("#chkTikki").checked=true;
+                     document.querySelector("#chkBhalla").checked=true;
+                     
+                 }
+                 else
+                 {
+                    document.querySelector("#chkDosa").checked=false;
+                     document.querySelector("#chkTikki").checked=false;
+                     document.querySelector("#chkBhalla").checked=false;
+                 }
+            }
+
+            function doProcessCheck()
+            {
+                var sum=0;
+                var all="<ol>";
+                 if(document.querySelector("#chkDosa").checked==true)
+                 {
+                     var a = document.querySelector("#chkDosa").value;
+                    all=all+"<li>"+a;
+                    sum =sum+parseInt(a);
+                 }
+                 if(document.querySelector("#chkTikki").checked==true)
+                 {
+                     var a = document.querySelector("#chkTikki").value;
+                    all=all+"<li>"+a;
+                    sum =sum+parseInt(a);
+                 }
+                 if(document.querySelector("#chkBhalla").checked==true)
+                 {
+                    var a = document.querySelector("#chkBhalla").value;
+                    all=all+"<li>"+a
+                    sum =sum+parseInt(a);
+                 }
+                 document.getElementById("chkR").innerHTML = all;
+                 document.getElementById("chkRes").innerHTML=sum;
+            }   
+       
+        function docheckPro(){
+                 if(document.querySelector("#job").checked==true)
+                 {
+                 document.querySelector("#spanRadio").innerHTML="Job";
+                 }
+                 else 
+                 if(document.querySelector("#business").checked==true)
+                 {
+                 document.querySelector("#spanRadio").innerHTML="Business";
+                 }
+                 else
+                 {
+                 document.querySelector("#spanRadio").innerHTML="Thinking";
+                 }
+
+        }
+    </script>
+    </head>
+    <body>
+        <center>
+            <table>
+                <tr>
+                    <th>
+                        <h1>Junk Food Menu</h1>
+                    </th>
+                </tr>
+                <tr><th>
+                    <label class="container">Order All
+                        <input type="checkbox" id="chkall" onclick ="doCheck(this);" >
+                        <span class="checkmark"></span>
+                      </label>
+                      <br>
+                </th></tr>
+                <center>
+                <tr><th>
+                    <label class="container">Dosa: 100
+                        <input type="checkbox" id="chkDosa"value="100">
+                        <span class="checkmark"></span>
+                      </label>
+                      <br>
+                </tr></th>
+                <tr><th>
+                     
+            <label class="container">Tikki: 60
+                <input type="checkbox" id="chkTikki"value="60">
+                <span class="checkmark"></span>
+              </label>
+              <br>
+                </th></tr>
+              <tr><th>
+                <label class="container">Bhalla: 90
+                    <input type="checkbox"id="chkBhalla" value="90">
+                    <span class="checkmark"></span>
+                  </label>
+                  <br>
+              </th></tr>
+              <tr>
+                  <th><button type="button" onclick="doProcessCheck();"><h4><b>Bill</b></h4></button></th>
+              </tr>
+              <tr>
+                  <th>
+                    <!-- <input type="text" id="chkRes"> -->
+                    <label for=""id="chkR"></label>
+                    <br>
+                    <span id="chkRes">*</span>
+                  </th>
+              </tr>
+              
+            </center>
+        </table>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <br>
+        <br>
+        <input type="radio" name="a" value="Job" id="job">Job
+        <input type="radio" name="a" value="Business" id="business">Business
+        <br>
+        <input type="button" value="Profession" onclick="docheckPro();">
+        <br>
+        <span id="spanRadio">*</span>
+</center>
+    </body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <title>Document</title>
+        <style>
+            .parent{
+                width: 1200px;
+                height: 500px;
+                border: 1px black solid;
+                background-color: rgb(17, 22, 20);
+                display: flex;
+                flex-direction: row;
+                justify-content:space-evenly;
+                align-items: center;
+                margin-left: 110;
+            }
+            .child-1{
+                width: 300px;
+                height: inherit;
+                border: 1px black solid;
+                background-color: darkgoldenrod;
+                
+                /* flex-shrink: 2; */
+                
+                
+            }
+            .child-2{
+                width: 300px;
+                height: inherit;
+                border: 1px black solid;
+                background-color: darkgoldenrod;
+                
+                /* flex-grow: 2; */
+                
+            }
+            .child-3{
+                width: 300px;
+                height: inherit;
+                border: 1px black solid;
+                background-color: darkgoldenrod;
+                
+                /* flex-grow: 1; */
+            }
+
+            .parentD{
+                width: 1200px;
+                height: 100px;
+                border: 1px black solid;
+                background-color:darkgoldenrod;
+                margin-left: 110;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-evenly;
+
+            }
+            .child-4{
+                height: 90;
+                width: 100;;
+                background-color: ivory;
+                border-radius: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-evenly;
+                margin-left: 10;
+                margin-top: 5;
+                
+                
+            }
+            img{
+                height: 90;
+                width: 100;;
+                border-radius: 50%;
+                /* display: flex;
+                flex-direction: row;
+                justify-content:space-evenly; */
+                /* margin-left: 10;
+                margin-top: 5; */
+            }
+            .child-5{
+                height: inherit;
+                width: 600;;
+                margin-left: 100;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-evenly;
+        
+            }
+            .sub{
+                height: inherit;
+                width: 100;
+                margin-top: 10;
+                
+                
+
+            }
+            .sub-1{
+                height: 60;
+                width: 500;
+                background-color:ivory;
+                margin-top: 20;
+                border-radius: 10%;
+
+            }
+
+            .child-6{
+                height: inherit;
+                width: 500;;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-evenly;
+        
+            }
+            .sub-2{
+                height: 90;
+                width: 100;
+                background-color: ivory;
+                border-radius: 60%;
+                margin-left: 150;
+                margin-top: 5;
+
+            }
+            .sub-3{
+                height: 90;
+                width: 100;
+                background-color: ivory;
+                border-radius: 60%;
+                margin-top: 5;
+
+            }
+            input{
+                height: 60;
+                width: 500;
+                background-color:ivory;
+                
+                border-radius: 10%;
+                font-size: 45;
+
+            }
+
+
+
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child-1"></div>
+            <div class="child-2"></div>
+            <div class="child-3"></div>
+        </div>
+        <div class="parentD">
+            <div class="child-4"><img src="pics/agent.jpg" alt=""></div>
+            <div class="child-5">
+                <div class="sub"><font><b><i><h1>Search</h1></i></b></font></div>
+                <div class="sub-1"><input type="text"></div>
+            </div>
+            <div class="child-6">
+                <div class="sub-2"><img src="pics/whatsapp.webp" alt=""></div>
+                <div class="sub-3"><img src="pics/youtube.jpg" alt=""></div>
+            </div>
+
+        </div>
+    </body>
+</html>

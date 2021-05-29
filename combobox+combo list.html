@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <title>Document</title>
+        <style>
+            table{
+                background-color: brown;
+                width: 360px;
+                height: 400px;
+            }
+        </style>
+        <script>
+            function dofill()
+            {
+
+                var food =document.getElementById("food");
+                var prices = document.getElementById("prices");
+                var types = document.getElementById("types");
+                
+
+                var burger = ["king jack","Double cheese","burger King"];
+                var bprices =["500","700","900"];
+
+                var pizza = ["margreta","farmhouse","fullyloaded"];
+                var pprices =["400","500","670"];
+
+                prices.length=0;
+                types.length=0;
+                if(food.selectedIndex==1)
+                {
+                    for(var i=0;i<burger.length;i++)
+                    {
+                        // alert(i);
+                         var opt1 = documemt.createElement("option");
+                         opt1.text=burger[i];
+                         opt1.value=burger[i];
+                         types.append(opt1);
+
+                         var opt2 = documemt.createElement("option");
+                         opt2.text=bprices[i];
+                         opt2.value=bprices[i];
+                         prices.append(opt2);
+
+                         
+                    }
+                }
+                else if(food.SelectedIndex==2)
+                {
+                    for(var i =0;i<pizza.length;i++)
+                    {
+                         var opt1 = documemt.createElement("option");
+                         opt1.text =pizza[i];
+                         opt1.value =pizza[i];
+                         types.append(opt1);
+
+                         var opt2 = documemt.createElement("option");
+                         opt2.text=pprices[i];
+                         opt2.value =pprices[i];
+                         prices.append(opt2);
+
+                         
+                    }
+                }
+
+                
+            }
+            function fillcart()
+            {
+                var types = document.getElementById("types");
+                var prices = document.getElementById("prices");
+
+                // var length=types.length;
+                // for(i=0;i<length;i++)
+                // {
+                //     // if(types.selectedIndex==i)
+                    
+                       var opt1=document.createElement("option");
+                        opt1.txt = types.value;
+                        opt1.value = types.value;
+                       // cart.append(opt1);
+                    /*
+                        var opt2=document.createElement("option");
+                        opt2.text=prices.value;
+                        opt2.value=prices.value;
+                        v.append(opt2);
+                        */
+                    
+                
+                // var a = documemt.createElement("option");
+                // a.text = types.value;
+                // a.value = types.value;
+                // cart.append(a);
+                // var b = documemt.createElement("option");
+                // b.text = prices.value;
+                // b.value = prices.value;
+                // v.append(b);
+                
+            }
+            function showbill()
+            {
+                var v = document.getElementById("v");
+                var sum=0;
+                for(i=0;i<v.length;i++)
+                {
+                   sum = sum + parseInt(v[i].value)
+                }
+                document.querySelector("#txta").value =sum;
+            }
+        </script>
+    </head>
+            <body>
+                <center>
+                    <p><h1><b><i>List ComboBox Task</i></b></h1></p>
+                    <table>
+                        
+                        <tr><th class="a">
+                            <h2>Select Type of food</h2>
+                            <select id="food" onchange="dofill();">
+                                <option value="select">select</option>
+                                <option value="burger">Burger</option>
+                                <option value="pizza">Pizza</option>
+                            </select>
+                        </th></tr>
+                        <tr><td class="a">
+                            <h3>Types</h3>
+                            <select  id="types" size="5" ondblclick="fillcart();">
+                                <option value="none">Different Types</option>
+
+
+                            </select>
+                            </td>
+                            <td class="a"> 
+                                <h3>Prices</h3>
+                                <select  id="prices" size="5">
+                                    <option value="none">prices</option>
+
+
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr><td class="a">
+                            <h3>Cart</h3>
+                            <select name="" id="Cart" size="5">
+                                <option value="none">none</option>
+                            </select>
+                            </td>
+                            <td class="a">
+                                <h3>Value of Selected</h3>
+                                <select name="" id="v" size="5">
+                                    <option value="none">none</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  align="center"><input style="background-color: blanchedalmond; font-weight: bold; width: 100px; height: 25px; border-radius: 20%;" type="button" id="btn" value="Bill" onclick="showbill();"></td>
+                        </tr>
+                        <tr>
+                            <td  align="center"> <input type="text" id="txta"></td>
+                        </tr>
+                        
+                    </table>
+                </center>
+            </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+document
+        </title>
+    </head>
+    <style>
+        select{
+            background-color: aqua;
+        }
+        body{
+            background-image: linear-gradient(to right, red , yellow);
+        }
+        
+    </style>
+    <script>
+        function onchange()
+        {
+            var a = document.getElementById("state");
+            var b = ref.value;
+            var c = ref.selectedIndex;
+            alert(b);
+            alert(c);
+        }
+    </script>
+    <body>
+        <center>
+            select state: <br>
+            <select name="" id="state" onchange="showstate();">
+                <option value="none">Select</option>
+                <option value="punjab">Punjab</option>
+                <option value="himachal">Himachal</option>
+                <option value="chennai">Chennai</option>
+            </select>
+        </center>
+    </body>
+</html>

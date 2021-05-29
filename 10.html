@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Document</title>
+        <script>
+          function dothis()
+          {
+               var F =document.Form.a.value;
+               var S =document.Form.b.value;
+               var Sum = parseInt(F) + parseInt(S);
+               document.Form.s.value = Sum;
+               if(F.trim()==""||S.trim()=="")
+               alert("Fill Numeric values");
+               else if(isNaN(F)==true||isNaN(S)==false)
+               alert("Fill Numeric values");
+          }
+          function dothat()
+          {
+               var F =document.Form.a.value;
+               var S =document.Form.b.value;
+               var mul = F*S;
+               document.Form.m.value = mul;
+
+          }
+          function dothisthat()
+          {
+            document.Form.a.value="";
+            document.Form.b.value="";
+            document.Form.s.value="";
+            document.Form.m.value="";
+          }
+          
+        </script>
+    </head>
+    <body>
+        <center>
+        <form action="" name="Form">
+
+            <p>Enter A: <input type="text" name="a"></p>
+            <p>Enter B: <input type="text" name="b"></p>
+            <p><button type="button" onclick="dothis()">Summation</button></p>
+            <p><button type="button" onclick="dothat()">Multiplication</button></p>
+            <p><button type="button" onclick="dothisthat()">Clear All</button></p>
+            <p><button type="reset" >Reset</button></p>
+            <p>The sum: <input type="text" name="s"></p>
+            <p>The Multi: <input type="text" name="m"></p>
+
+        </form>
+    </center>
+    </body>
+    
+</html>

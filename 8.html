@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>document</title>
+        <script>
+            function myfun(){
+
+                var x = 10;
+                alert(x);
+
+                var x = "ajndjdn";
+                alert(x);
+                
+                x = 94848.42;
+                alert(x);
+
+                y = 764764537.5843;
+                alert(y);
+
+            }
+            function myfunction(){
+                y = 535768783;
+                alert(y);
+            }
+            function myfunction1(){
+                document.getElementById("demo").style.fontSize = "25px";
+                document.getElementById("demo").style.backgroundColor = "red";
+
+            }
+            function myf(){
+                var x = document.getElementById("fname").value;
+                var y = document.getElementById("lname").value;
+                alert(x+" "+y);
+            }
+            
+        </script>
+    </head>
+
+    <body>
+        <p id="demo">djfjenfjn  uwhfurhueu rufuru wrjuwr  rjfurue r frfurijfr w furhfurhfue</p>
+        <button type="button" onclick="myfun()">click me</button>
+        <button type="button" onclick="myfunction()">click me 2</button>
+        <button type="button" onclick="myfunction1()">click me 3</button>
+        <form action="/action_page.php">
+            <label for="fname"> First Name</label>
+            <input type="text" id="fname"><br><br>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname"><br><br>
+            <button type="button" onclick="myf()">Submit</button>
+        </form>
+    </body>
+</html>

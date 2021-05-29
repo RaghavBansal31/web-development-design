@@ -1,0 +1,319 @@
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <style>
+        body{
+            background-color: azure;
+        }
+     #box{
+         width: 500px;
+         height: 500px;
+         background-color: blanchedalmond;
+         float: center;
+         border: 2px black solid;
+         margin-top: 60px;
+         border-radius: 2%;
+     }
+     .mb{
+            width: 100;
+            height: 30;
+            border-radius: 20%;
+            background-color: orange;
+            border: 2px black solid;
+            font-weight: bold;
+            cursor: pointer;
+     }
+   .btn{
+        
+            width:110px;; 
+            height: 40;
+            padding:10px;
+            background-color: rgb(243, 158, 1);
+            font-weight: bold;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+            transition: ease all 1s;
+            border-radius: 10px;;
+            margin-left: 650px;
+            margin-top: -50px;
+            border: 2px black solid;
+     }
+     #cross{
+         width: 20px;;float:right;
+         height: 10px;
+         cursor: pointer;
+         padding: 10px ;
+         border-radius: 10%;
+         
+     }
+     h1{
+         margin-top: 10px;
+         margin-left: 45px;
+     }
+     table{
+         float:left;
+     }
+     label{
+         font-size: larger;
+         font-style: normal;
+         font: 1000;
+         margin-left: 30;
+     }
+     input{
+         width: 200;
+         height: 25;
+         border-radius: 5%;
+         margin-left: 30;
+     }
+     .r{
+         width: 15;
+     }
+     .b{
+           
+            background-color: rgb(243, 158, 1);
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: ease all 1s;
+            border-radius: 10px;;
+            border: 2px black solid;
+            width: 80;
+            height: 30;
+            margin-left: 200;
+            cursor: pointer;
+     }
+     .ok{
+            color: green;
+            border:1px rgb(1, 44, 11) solid;
+            border-radius:10%;
+            padding: 0px 20px 0px 20px;;
+        }
+        .not-ok{
+            color: red;
+            border:1px rgb(251, 0, 0) solid;
+            border-radius:10%;
+            padding: 0px 20px 0px 20px;;
+        }
+    </style>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+           $(document).ready(function(){
+
+              $("#box").hide();
+               $("#btn").click(function(){
+                   $("#box").show();
+                   if($("#btn").html()=="Signup here")// how to use value of input button instead of html
+                   {
+                    $("#btn").html()="Hide";
+                   }
+                   else{
+                    $("#btn").html()="Signup here";
+                    $("#box").slideUp();
+                   }
+               });
+               $("#cross").click(function(){
+                   $("#box").fadeOut(1000);
+                   $("#btn").show();
+               });
+             //----------------------------------------
+                $("#txterr").blur(function(){
+                    if($(this).val().length==0)
+                    $("#nameerr").html(" Fill your name").addClass("not-ok").removeClass("ok");
+                    else
+                    {
+                    var r = /^[a-zA-Z ]*$/;
+                    var pwd=$(this).val();
+                    if(r.test(pwd)==true)
+                    {
+                        
+                        $("#nameerr").html("Ok").addClass("ok").removeClass("not-ok");
+                    }
+                    else
+                    {
+                    $(this).val("Invalid");
+                    $("#nameerr").html(" Fill your name").addClass("not-ok").removeClass("ok");
+                    }
+                }
+
+                    
+                    
+
+                });
+             //-------------------------------------------
+            //  $("#txterror").blur(function(){
+            //         if($(this).val().length==0)
+            //         $("#nameerror").html(" Fill your name").addClass("not-ok").removeClass("ok");
+            //         else
+            //         $("#nameerror").html("Ok").addClass("ok").removeClass("not-ok");
+
+                    $("#txterror").blur(function(){
+                    if($(this).val().length==0)
+                    $("#nameerror").html(" Fill your name").addClass("not-ok").removeClass("ok");
+                    else
+                    {
+                    var r = /^[a-zA-Z ]*$/;
+                    var pwd=$(this).val();
+                    if(r.test(pwd)==true)
+                    {
+                        
+                        $("#nameerror").html("Ok").addClass("ok").removeClass("not-ok");
+                    }
+                    else
+                    {
+                    $(this).val("Invalid");
+                    $("#nameerror").html(" Fill your name").addClass("not-ok").removeClass("ok");
+                    }
+                }
+
+                });
+              //----------------------------------------------  
+            //   $("#emailerr").blur(function(){
+
+                    // if($(this).val().length==0)
+                    // $("#emailerror").html(" Fill your email id").addClass("not-ok").removeClass("ok");
+                    // else
+                    // $("#emailerror").html("Ok").addClass("ok").removeClass("not-ok");
+
+                    $("#emailerr").blur(function(){
+                    if($(this).val().length==0)
+                    $("#emailerror").html(" Fill your email ID").addClass("not-ok").removeClass("ok");
+                    else
+                    {
+                    var r = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                    var pwd=$(this).val();
+                    if(r.test(pwd)==true)
+                    {
+                        
+                        $("#emailerror").html("Ok").addClass("ok").removeClass("not-ok");
+                    }
+                    else
+                    {
+                    $(this).val("Invalid");
+                    $("#emailerror").html(" Fill your email ID").addClass("not-ok").removeClass("ok");
+                    }
+                   }
+
+
+                });
+            
+              //---------------------------------------------- 
+              $("#icon").mousedown(function(){
+                    $("#txtPwd").prop("type","text");
+                    $(this).addClass("fa-eye-slash").removeClass("fa-eye ey");
+              });
+              $("#icon").mouseup(function(){
+                    $("#txtPwd").attr("type","password"); //fa fa-eye ey
+                    $(this).removeClass("fa-eye-slash").addClass("fa-eye ey");
+              });
+              //--------------------------
+
+              $("#txtPwd").blur(function()
+              {
+                var r=/(?=^.{8,}$)(?=.*\d)(?=.*[!@#$%^&*]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
+                var pwd=$(this).val();
+                if(r.test(pwd)==true)
+                        $(this).val("Valid");
+                    else
+                    $(this).val("Invalid");
+              });
+              //-----------------------------------
+              $("#txtMob").blur(function()
+              {
+                var r=/^[7-9]{1}[0-9]{9}$/;
+                var mob=$(this).val();
+                if(r.test(mob)==true)
+                $(this).val("Valid");
+                    else
+                    $(this).val("Invalid");
+              });
+              //----------------------------------------
+            //   $("#nationerror").blur(function(){
+            //         if($(this).val().length==0)
+            //         $("#nationerr").html(" Fill your Nationality").addClass("not-ok").removeClass("ok");
+            //         else
+            //         $("#nationerr").html("Ok").addClass("ok").removeClass("not-ok");
+
+
+                    $("#nationerror").blur(function(){
+                    if($(this).val().length==0)
+                    $("#nationerr").html(" Fill your nationality").addClass("not-ok").removeClass("ok");
+                    else
+                    {
+                    var r = /^[a-zA-Z ]*$/;
+                    var pwd=$(this).val();
+                    if(r.test(pwd)==true)
+                    {
+                        
+                        $("#nationerr").html("Ok").addClass("ok").removeClass("not-ok");
+                    }
+                    else
+                    {
+                    $(this).val("Invalid");
+                    $("#nationerr").html(" Fill your name").addClass("not-ok").removeClass("ok");
+                    }
+                    }
+                });
+
+                //---------------------------------------------
+           });
+           
+    </script>
+    <body>
+        <center>
+        <div id="btn"><input type="button" value="Signup here" class="mb"></div>
+        <div id="box">
+            <div id="cross">X</div>
+            <h1>Sign Up Page</h1>
+            <table>
+                <tr><td>
+                    <label>First Name</label><span id="nameerr">  *</span>
+                    <br>
+                    <input id="txterr"type="text">
+                </td></tr>
+                <tr><td>
+                    <label for="">Last Name</label><span id="nameerror">  *</span>
+                    <br>
+                    <input id="txterror"type="text">
+                </td></tr>
+                <tr><td>
+                    <label for="">Email ID</label><span id="emailerror">  *</span>
+                    <br>
+                    <input type="text" id="emailerr">
+                </td></tr>
+                <tr><td>
+                    <label for="">Password</label><span id="errPwd">  *</span>
+                    <br>
+                    <input type="password" id="txtPwd" class="txt">
+                    <i class=" fa-eye ey" id="icon" aria-hidden="true" >
+                </td></tr>
+                <tr><td>
+                    <label for="">Mobile No.</label>
+                    <br>
+                    <input type="text" id="txtMob" class="txt">
+                </td></tr>
+                <tr><td>
+                    <label for="">Gender</label>
+                    <br>
+                    <input name="radio"class="r"type="radio"> Male
+                    <input name="radio"class="r"type="radio"> Female
+                    <input name="radio"class="r"type="radio">Prefer Not to Say
+                </td></tr>
+                <tr><td>
+                    <label for="">Nationality</label><span id="nationerr">  *</span>
+                    <br>
+                    <input type="text" id="nationerror">
+                </td></tr>
+                <tr><td>
+                    <br>
+                    <input class="b"type="button" value="Submit">
+                </td></tr>
+            </table>
+         
+        </div>
+    </center>
+    </body>
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Document</title>
+        <script src="js/jquery-1.8.2.min.js"></script>
+        <script>
+           $(document).ready(function(){
+             $("#btn1,#btn2").click(function(){
+                 $("#txt").val("clicked");
+                 $("#txt").click(function(){
+                     alert("clicked");
+                 });
+             });
+             $("#btn2").mouseenter(function(){
+                 $("#txt").val("Mouse Entered");
+             });
+             $("#btn2").mouseout(function(){
+                 $("#txt").val("mouse out");
+             });
+             
+           });
+
+        </script>
+    </head>
+   <body>
+       <input type="button" id="btn1" value="click me">
+       <input type="button" id="btn2" value="click me">
+        <br>
+       <input type="text" id="txt">
+
+       
+   </body>
+</html>

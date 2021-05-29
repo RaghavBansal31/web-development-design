@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-1.8.2.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
     <style>
         body{
@@ -34,6 +35,25 @@
             border-radius: 10px;;
             margin-left: 20px;
             
+        }
+        .txt
+        {
+            width: 90%;
+        }
+        label{
+            color:Blue;
+        }
+        .ok{
+            color: green;
+            border:1px rgb(1, 44, 11) solid;
+            border-radius:10%;
+            padding: 0px 20px 0px 20px;;
+        }
+        .not-ok{
+            color: red;
+            border:1px rgb(251, 0, 0) solid;
+            border-radius:10%;
+            padding: 0px 20px 0px 20px;;
         }
     </style>
 
@@ -70,6 +90,44 @@
                     $("#box").slideUp(1000);
                     }
               });
+              //----------------
+              $("#txtEmail").blur(function(){
+                  if($(this).val().length==0)
+                    $("#errEmail").html("Fill Email id").addClass("not-ok").removeClass("ok");
+                    else
+                    $("#errEmail").html("Ok").addClass("ok").removeClass("not-ok");
+              });
+              //----------------------
+              $("#icon").mousedown(function(){
+                    $("#txtPwd").prop("type","text");
+                    
+                    $(this).addClass("fa-eye-slash").removeClass("fa-eye ey");
+              });
+              $("#icon").mouseup(function(){
+                    $("#txtPwd").attr("type","password"); //fa fa-eye ey
+                    $(this).removeClass("fa-eye-slash").addClass("fa-eye ey");
+              });
+              //--------------------------
+              $("#txtPwd").blur(function()
+              {
+                var r=/(?=^.{8,}$)(?=.*\d)(?=.*[!@#$%^&*]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
+                var pwd=$(this).val();
+                if(r.test(pwd)==true)
+                        $(this).val("Valid");
+                    else
+                    $(this).val("Invalid");
+              });
+              //-----------------------------------
+              $("#txtMob").blur(function()
+              {
+                var r=/^[7-9]{1}[0-9]{9}$/;
+                var mob=$(this).val();
+                if(r.test(mob)==true)
+                $(this).val("Valid");
+                    else
+                    $(this).val("Invalid");
+              });
+
         });
     </script>
 
@@ -78,6 +136,41 @@
     <div id="box">
         <div id="cross">X</div>
         <h1>Signup Window</h1>
+        
+        <table width="90%"> 
+            <tr>
+                <td>
+                    <label>Email id</label> <span id="errEmail">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" id="txtEmail" class="txt"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Password</label> <span id="errPwd">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" id="txtPwd" class="txt">
+                    <i class="fa fa-eye ey" id="icon" aria-hidden="true" >
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Mobile Number</label> <span id="errMob">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="text" id="txtMob" class="txt" ></td>
+            </tr>
+
+        </table>
+
+        
     </div>
     <div id="btn" class="btn">Signup Here</div>
 

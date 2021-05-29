@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Document
+        </title>
+        <script>
+            function dothis()
+            {
+               var Fn = document.frm.fn.value;
+               var Ln = document.frm.ln.value;
+               var Full = Fn+" "+Ln;
+               document.frm.full.value = Full;
+            }
+
+        </script>
+    </head>
+    <body>
+        <center>
+            <form name="frm">
+            <p>Enter your First name: <input type="text" name="fn"></p>
+            <p>Enter your Last name: <input type="text" name="ln"></p>
+            <button type="button" onclick="dothis()">submit</button>
+            <p>FUll Name: <input type="text" name="full"></p>
+        </form>
+        </center>
+    </body>
+</html>

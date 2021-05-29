@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <style>
+           .p{
+               width: 600px;
+               height: 30px;
+               border: 1px brown solid;
+               background-color: brown;
+           }
+           .w{
+               width: 600px;
+               height: 540px;
+               border: 1px rosybrown solid;
+               background-color: rosybrown;
+               border: 1px brown solid;
+               
+           
+           }
+           .m{  
+               
+               color: brown;
+               font-size: 30px;
+               
+               
+               
+           }
+           .r{
+               color: brown;
+               font-size: 30px;
+           }
+           button{
+               width: 100;
+               height:40;
+               border-radius: 20%;
+               font-size: 20;
+               background-color: brown;
+               color: cornsilk;
+               margin-top: 30;
+               margin-bottom: 30;
+               border: 1px rgb(34, 12, 12) solid;
+           }
+          input{
+              height: 30px;
+              width: 200;
+              margin-left: 20;
+              border: 1px brown solid;
+          }
+    </style>
+    <script>
+                
+             function myT(){
+                //  let btn = document.querySelector('#er')
+                //  btn.addEventListener('click',()=> btn.style.fontSize ="25px");
+                //  btn.addEventListener('click',()=> btn.style.backgroundColor ="rosybrown");
+
+                document.getElementById("er").style.fontSize = "25px";
+                document.getElementById("er").style.backgroundColor = "red";
+                 
+
+                var cl = document.getElementById("c").value;
+                var jl = document.getElementById("j").value;
+                var nl = document.getElementById("n").value;
+                var TO = parseFloat(cl)+parseFloat(jl)+parseFloat(nl);
+
+                if(TO==300||TO<300)
+                {
+                document.getElementById("ci").value = TO;
+                document.getElementById("ci").disabled = true;
+                }
+                else
+                alert("Please enter Numeric marks less or equal to 100 in each field");
+             }
+             function myP(){
+
+                document.getElementById("ri").style.fontSize = "25px";
+                document.getElementById("ri").style.backgroundColor = "red";
+
+                var cl = document.getElementById("c").value;
+                var jl = document.getElementById("j").value;
+                var nl = document.getElementById("n").value;
+                var TO = parseFloat(cl)+parseFloat(jl)+parseFloat(nl);
+                var peer = (TO/300)*100;
+                if(peer==100||peer<100)
+                {
+                document.getElementById("ji").value = peer;
+                document.getElementById("ji").disabled = true;
+                }
+                else
+                alert("Please enter Numeric marks less or equal to 100 to get a justified percentage");
+
+                
+             }
+             function myR(){
+
+                document.getElementById("rie").style.fontSize = "25px";
+                document.getElementById("rie").style.backgroundColor = "red";
+
+                var cl = document.getElementById("c").value;
+                var jl = document.getElementById("j").value;
+                var nl = document.getElementById("n").value;
+                var TO = parseFloat(cl)+parseFloat(jl)+parseFloat(nl);
+                var peer = (TO/300)*100;
+                if(peer<50)
+                {
+                document.getElementById("ni").value = "You Have Failed";
+                document.getElementById("ni").disabled = true;
+                }
+                else if(peer>=50&&peer<=100)
+                {
+                document.getElementById("ni").value = "You Have Passed";
+                document.getElementById("ni").disabled = true;
+                }
+                else
+                alert("Please enter Numeric marks less or equal to 100 to get a justified result");
+             }
+             function myC(){
+
+                document.getElementById("riee").style.fontSize = "25px";
+                document.getElementById("riee").style.backgroundColor = "red";
+             }
+    </script>
+    <body>
+        <form action="" name="Form">
+        <center>
+        <table>
+            <tr>
+                <td class="p"></td>
+            </tr>
+            <tr>
+                <td class="w">
+                    <center>
+                    <table >
+                        <tr class="m">
+                            <th>
+                             <i><b>   Marks Card Application</b></i>
+                                
+                        </th>
+                        </tr>
+                        <tr>
+                            <td class="r">
+                                <p><i><b>C++:</b></i> <input type="text" id="c"></p>
+                                <p><i><b>Java:</b></i><input type="text" id="j"></p>
+                                <p><i><b>Node Js Web:</b></i><input type="text" id="n"></p>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" id="er"name="ty"onclick="myT()">Total</button>
+                                <button type="button"id="ri"onclick="myP()">Per</button>
+                                <button type="button"id="rie"onclick="myR()">Result</button>
+                                <button type="reset"id="riee" onclick="myC()">Clear</button>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="r">
+                                <p><i><b>Total Marks:</b></i><input type="text" id="ci"></p>
+                                <p><i><b>Percentage:</b></i><input type="text" id="ji"></p>
+                                <p><i><b>Result:</b></i> <input type="text" id="ni"> Pass/Fail</p>
+                            </td>
+                        </tr>
+                    </center>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+</form>
+    </body>
+</html>

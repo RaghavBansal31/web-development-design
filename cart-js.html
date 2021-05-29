@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <script src="js/cart.js">
+
+    </script>
+</head>
+<body >
+    <table align="center" cellspacing="50" cellpadding="10">
+        <tr>
+            <td colspan="2" align="center">
+    Select Item: <br>
+    <select id="items" onchange="dofill();">
+        <option value="none">Select</option>
+        <option value="pizza">Pizza</option>
+        <option value="burger">Burger</option>
+        </select>
+        <br> <br> <br>
+    </td>
+    </tr>
+    <tr>
+        <td>
+            types:
+            <select  id="types" size="5" ondblclick="fillcart();">
+                <option value="none">types of items</option>
+            </select>
+        </td>
+    
+      
+          <td>
+              Price in Rs:
+              <select id="prices" size="5" ondblclick="fillcartP();">
+                  <option value="none">price of items</option>
+              </select>
+          </td>
+      </tr>
+    </tr>
+    <tr>
+        <td class="a">Cart:
+            <select id="cart" size="3">
+                <option value="none">none</option>
+
+            </select>
+
+
+        </td>
+        <td class="a">value of selected item:
+            <select id="cartP" size="3">
+                <option value="none">none</option>
+            </select>
+
+        </td>
+    </tr>
+       
+            
+        </table>
+</body>
+</html>

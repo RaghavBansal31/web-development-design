@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Document</title>
+        <style>
+         input{
+             width: 500px;
+             height: 50px; 
+             font-size: 24;
+         }
+         button{
+             
+             display: flex;;
+             flex-direction: row;
+             justify-content: space-evenly;
+             align-items: center;
+             float: left;
+             width: 100px;
+             height: 50px;
+             border: 3px rgb(61, 122, 46) solid;
+             background-color: rgb(99, 142, 192)
+         }
+         th{
+             display: flex;;
+             flex-direction: row;
+             justify-content: space-evenly;
+             align-items: center;
+             width: 500px;
+            
+         }
+         table{
+            
+             border: 1px rgb(243, 226, 70) solid;
+             background-color:black;
+         }
+         font{
+             font-size: 40;
+             border-radius: 10%;
+             border: 0px rgb(2, 2, 2) solid;
+         }
+         #answer{
+            width: 500px;
+             height: 50px; 
+             font-size: 24;
+             background-color: white;
+            float: left;
+         }
+
+         #answer:hover{
+            width: 500px;
+             height: 50px; 
+             font-size: 24;
+              text-align: center;
+                box-shadow: 0 4px rgba(0,0,0,0.2);
+                background-color: #bb641d;
+         }
+             
+         
+        </style>
+        <script>
+                   function dis(val)
+                   {
+                       if(val.trim()=="")
+                       alert("Enter Some value");
+                       else if(isNaN(val)==true)
+                       alert("Fill Numeric value")
+                       document.getElementById("answer").style.backgroundColor="red";
+                       
+                       document.getElementById("answer").value +=val;
+                       
+                   }
+                   function solve()
+                   {
+                       let x = document.getElementById("answer").value;
+                       let y = eval(x);
+                       document.getElementById("answer").value = y;
+                   }
+                   function clr()
+                   {
+                       document.getElementById("answer").value = "";
+                   }
+
+        </script>
+    </head>
+
+
+    <body>
+        <center>
+          <table border="1" width=500 height=380 >
+              <tr class="m">
+                  
+                  <i><b><font style="background-color: brown; width: 300;">Calculator</font></b></i>
+                
+              </tr>
+              <tr>
+                  <th>
+                      <input type="text" name="input" size="16" id="answer">
+                    </th>
+                    
+              </tr>
+              <tr>
+                  
+                    <th><button type="button"name="one" value="1" onclick="dis('1')"><i><b><font>1</font></b></i></button>
+                    <button type="button" name="two" value="2" onclick="dis('2')"><i><b><font>2</font></b></i></button>
+                    <button type="button" name="three" value="3" onclick="dis('3')"><i><b><font>3</font></b></i></button>
+                    <button type="button"name="clear" value="C" onclick="clr()"><i><b><font>c</font></b></i></button></th>
+                  
+              </tr>
+              <tr>
+                  
+                <th ><button type="button"name="four" value="4" onclick="dis('4')"><i><b><font>4</font></b></i></button>
+                <button type="button" name="five" value="5" onclick="dis('5')"><i><b><font>5</font></b></i></button>
+                <button type="button"name="six" value="6" onclick="dis('6')"><i><b><font>6</font></b></i></button>
+                <button type="button"name="divide" value="/" onclick="dis('/')"><i><b><font>/</font></b></i></button></th>
+              
+          </tr>
+          <tr>
+            <th ><button type="button"name="seven" value="7" onclick="dis('7')"><i><b><font>7</font></b></i></button>
+                <button type="button"name="eight" value="8" onclick="dis('8')"><i><b><font>8</font></b></i></button>
+                <button type="button"name="nine" value="9" onclick="dis('9')"><i><b><font>9</font></b></i></button>
+                <button type="button"name="multiply" value="*" onclick="dis('*')"><i><b><font>x</font></b></i></button>
+                
+
+          </tr>
+          <tr>
+            <th ><button type="button"name="zero" value="0" onclick="dis('0')"><i><b><font>0</font></b></i></button>
+                <button type="button"name="add" value="+" onclick="dis('+')"><i><b><font>+</font></b></i></button>
+                <button type="button"name="substract" value="-" onclick="dis('-')"><i><b><font>-</font></b></i></button>
+                <button type="button"name="equal" value="=" onclick="solve()"><i><b><font>=</font></b></i></button>
+                </th>
+
+          </tr>
+        
+    
+          </table>
+        </center>
+    </body>
+</html>

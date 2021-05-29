@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function showState()
+        {
+            var ref=document.getElementById("state");
+            var selState=ref.value;
+            var index=ref.selectedIndex;
+            alert(selState);
+            alert(index);
+
+        }
+        function doShowItems(refList)
+        {
+                var length=refList.length;
+                var selItems="";
+                var sum=0;
+                for(i=0;i<length;i++)
+                {
+                    if(refList[i].selected==true)
+                    {
+                        //alert("Value="+refList[i].value+"      text="+refList[i].text);
+                        selItems=selItems+refList[i].text+",";
+                        sum=sum+ parseInt(refList[i].value);
+                    }
+                }
+                document.querySelector("#selItems").value=selItems;
+                document.querySelector("#sum").value=sum;
+            
+            /*
+            //when its not "multiple"
+            var selState=refList.value;
+            var index=refList.selectedIndex;
+            alert(selState);
+            alert(index);*/
+
+        }
+
+        function doClear(refList)
+        {
+               // refList.innerHTML="";
+               refList.length=1;
+        }
+        function doDel(refList)
+        {
+            refList.remove(refList.selectedIndex);
+        }
+        function doAdd(refList)
+        {
+                var opt=document.createElement("option");
+                opt.text="new text";
+                opt.value="new value";
+                refList.append(opt);
+
+
+        }
+    </script>
+</head>
+<body>
+        <center>
+            Select State: <br>
+            <select  id="state" onchange="showState();">
+                    <option value="none">Select</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Himachal">Himachal</option>
+                    <option value="Rajsthan">Rajsthan</option>
+            </select>
+            <p>
+                Select Items to Buy:(Array of Strings) <br>
+                <select  id="items" size="5" multiple  ondblclick="doDel(this);">
+                    <option value="none">Select Items</option>
+                    <option value="50000">Laptop</option>
+                    <option value="18000">Mobile</option>
+                    <option value="2000">Books</option>
+                    <option value="300">Pen</option>
+                    <option value="1000000">Car</option>
+                </select>
+                <br>
+                <input type="button" value="Show Selected Items" onclick="doShowItems(items);">
+                <input type="button" value="Clear All" onclick="doClear(items);">
+
+                <input type="button" value="Add Item" onclick="doAdd(items);">
+
+
+                <br>
+                Sel. Items <input type="text" id="selItems">
+                <br>
+                Sel. Price <input type="text" id="sum">
+
+
+
+            </p>   
+        </center>
+</body>
+</html>
