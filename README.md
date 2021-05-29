@@ -1,2 +1,2 @@
 # web-development-design
-CSS and HTML pages are there 
+CSS and HTML and Jquery and javascript pages are there 
