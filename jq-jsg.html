@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <script src="js/jquery-1.8.2.min.js"></script>
+<script>
+    $(document).ready(
+        function() //name less anonymous function
+        { 
+              $("#btn1,#btn2").click(function(){
+                  //alert("Clicked");
+                  $("#txt").val("Clicked");
+
+              }); 
+              //--------------------
+              $("#btn1").mouseenter(function(){
+                  //alert("Mouse Entered");
+                  $("#txt").val("Mouse Entered");
+              });
+              //------------------
+              $("#btn1").mouseout(function(){
+                  //alert("Mouse Exit");
+                  $("#txt").val("Mouse Exit");
+              });
+        }
+
+    );
+</script>
+
+</head>
+<body>
+    <center>
+        <input type="button" id="btn1" value="Click Me">
+        <input type="button" id="btn2" value="Click Me">
+        <br>
+        <input type="text" id="txt">
+    </center>
+</body>
+</html>
